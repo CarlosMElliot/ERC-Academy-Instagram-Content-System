@@ -101,6 +101,19 @@ The `identity/` folder contains the dedicated presenter identity sheet used to s
 
 Use this sheet primarily for face structure, glasses, hairstyle, beard/mustache, expression range and front/three-quarter/profile continuity. It complements rather than replaces the full-body set.
 
+### Presenter identity priority
+
+Whenever the recurring ERC Academy presenter appears, use this hierarchy for likeness:
+
+> **`references/identity/` → `references/full-body/` → historical written descriptions**
+
+- **`references/identity/` is authoritative for facial likeness**: facial structure, round black glasses, curly dark hairstyle, beard/mustache, skin appearance, expression range, and front/three-quarter/profile facial continuity.
+- **`references/full-body/` is secondary support** for body proportions, clothing fit, posture, pose, gesture, and composition.
+- **`references/sample-posts/` governs ERC graphic/layout identity**, not presenter facial identity.
+- If a full-body or older generated reference conflicts with the dedicated identity set on facial appearance, **follow `references/identity/`**.
+
+This priority is part of the canonical ERC production workflow and should be applied automatically in fresh chats before presenter image generation.
+
 ### `references/full-body/` — presenter identity and pose reference
 
 The 25 full-body images are the canonical visual-model reference set for the recurring ERC Academy presenter. They are not merely archived photos and they are **not pose templates that must be copied literally**.
