@@ -19,7 +19,7 @@ Also inspect:
 - `references/sample-posts/` for established ERC Academy visual design.
 - `references/full-body/` when the recurring presenter appears in the artwork.
 
-The actual visual references should be used together with the written specifications.
+The repository visual references and written specifications should be used together. If the GitHub connector cannot decode binary PNG/JPEG pixels, enumerate the assets and use their repository/raw URLs where supported by the active image tool. Do not block production or ask for redundant re-uploads solely because the GitHub connector is text-oriented; fall back to the canonical written visual specification when remote-image access is unavailable.
 
 ### 4. Read the content strategy and persistent idea/source log
 Read:
