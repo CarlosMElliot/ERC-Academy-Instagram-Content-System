@@ -27,3 +27,17 @@ When written instructions and old historical descriptions are too abstract to se
 ## Public-repository status
 
 The user explicitly authorized these visual references to be stored in this public repository.
+
+
+## Binary-access behavior
+
+These files remain the canonical visual assets even when a particular GitHub connector can only enumerate them rather than decode their pixel data.
+
+For future chats:
+- preserve and use the repository paths/raw GitHub URLs as the canonical locations;
+- prefer direct remote-reference use when the active image-capable tool supports URLs;
+- do not require the user to re-upload assets already stored here merely because a text connector cannot render them;
+- use the written brand/generation specifications and this manifest as the production fallback;
+- request a manual upload only for a specific pixel-level comparison that cannot be achieved through repository/raw URL access.
+
+This policy removes binary-connector limitations as a general production blocker while keeping claims about actual pixel inspection accurate.
