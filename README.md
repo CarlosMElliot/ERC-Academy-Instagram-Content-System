@@ -20,6 +20,8 @@ The repository is intentionally **public**, and the user has explicitly authoriz
 - `brand/IMAGE_GENERATION_SPEC.md` — generation rules and quality checks.
 - `brand/POST_TEMPLATE.md` — canonical post/caption template.
 - `series/aprender-con-ciencia/SERIES_SPEC.md` — series editorial rules.
+- `series/aprender-con-ciencia/CONTENT_STRATEGY.md` — where new topics come from and how they are developed without repetition.
+- `series/aprender-con-ciencia/CONTENT_IDEA_LOG.md` — persistent backlog/history of candidate ideas and user-supplied sources.
 - `series/aprender-con-ciencia/POST_LOG.md` — numbering and publishing-status source of truth.
 - `series/aprender-con-ciencia/HISTORICAL_CONTEXT.md` — recovered historical context.
 - `publishing/ACCOUNT_AND_LINKS.md` — account/social reference.
