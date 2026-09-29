@@ -519,12 +519,12 @@
           "kind": "identity",
           "role": "primary_presenter_identity",
           "priority": "highest",
-          "filename": "reference-sheet-01.png.png",
-          "path": "references/identity/reference-sheet-01.png.png",
+          "filename": "reference-sheet-01.png",
+          "path": "references/identity/reference-sheet-01.png",
           "sha": "06b89d366fa2b9bd84258e6618bf1a9d0b729fbf",
           "size_bytes": 2168376,
-          "raw_url": "https://raw.githubusercontent.com/CarlosMElliot/ERC-Academy-Instagram-Content-System/main/references/identity/reference-sheet-01.png.png",
-          "github_url": "https://github.com/CarlosMElliot/ERC-Academy-Instagram-Content-System/blob/main/references/identity/reference-sheet-01.png.png",
+          "raw_url": "https://raw.githubusercontent.com/CarlosMElliot/ERC-Academy-Instagram-Content-System/main/references/identity/reference-sheet-01.png",
+          "github_url": "https://github.com/CarlosMElliot/ERC-Academy-Instagram-Content-System/blob/main/references/identity/reference-sheet-01.png",
           "usage": "Load first whenever the recurring presenter appears. Primary source for facial likeness; supplement with full-body assets for proportions/pose and sample-post assets for ERC layout/style."
         }
       ]
