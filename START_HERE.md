@@ -11,14 +11,16 @@ First read `FRESH_CHAT_WORKFLOW.md` for the end-to-end operating sequence.
 3. Review the visual examples in `Sample ERC_Instagram_Posts/`
 4. Review the presenter references in `Full Body Shots/` when the artwork includes the recurring presenter
 5. `series/aprender-con-ciencia/SERIES_SPEC.md`
-6. `series/aprender-con-ciencia/POST_LOG.md`
-7. `series/aprender-con-ciencia/HISTORICAL_CONTEXT.md`
-8. `brand/POST_TEMPLATE.md`
-9. `publishing/ACCOUNT_AND_LINKS.md`
-10. `publishing/INSTAGRAM_WORKFLOW.md`
-11. `references/REFERENCE_ASSET_MANIFEST.md`
-12. Read the latest file in `handoff/` for migration/session decisions
-13. When relevant, inspect individual records under `series/aprender-con-ciencia/posts/`
+6. `series/aprender-con-ciencia/CONTENT_STRATEGY.md`
+7. `series/aprender-con-ciencia/CONTENT_IDEA_LOG.md`
+8. `series/aprender-con-ciencia/POST_LOG.md`
+9. `series/aprender-con-ciencia/HISTORICAL_CONTEXT.md`
+10. `brand/POST_TEMPLATE.md`
+11. `publishing/ACCOUNT_AND_LINKS.md`
+12. `publishing/INSTAGRAM_WORKFLOW.md`
+13. `references/REFERENCE_ASSET_MANIFEST.md`
+14. Read the latest file in `handoff/` for migration/session decisions
+15. When relevant, inspect individual records under `series/aprender-con-ciencia/posts/`
 
 ## How to use the image folders
 
