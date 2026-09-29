@@ -16,16 +16,16 @@ Follow its mandatory reading/review order and current continuation instructions.
 Read the files under `brand/`.
 
 Also inspect:
-- `Sample ERC_Instagram_Posts/` for established ERC Academy visual design.
-- `Full Body Shots/` when the recurring presenter appears in the artwork.
+- `references/sample-posts/` for established ERC Academy visual design.
+- `references/full-body/` when the recurring presenter appears in the artwork.
 
 The actual visual references should be used together with the written specifications.
 
 ### 4. Read the content strategy and persistent idea/source log
 Read:
 
-- `series/aprender-con-ciencia/CONTENT_STRATEGY.md`
-- `series/aprender-con-ciencia/CONTENT_IDEA_LOG.md`
+- `content/aprender-con-ciencia/CONTENT_STRATEGY.md`
+- `content/aprender-con-ciencia/CONTENT_IDEA_LOG.md`
 
 Use them to select distinct topics, preserve user-supplied links/references, and prevent repetition across chats and over time.
 
@@ -34,7 +34,7 @@ If the user supplies a link, paper, article, video, book, quote, uploaded file o
 ### 5. Read the canonical post log
 Read:
 
-`series/aprender-con-ciencia/POST_LOG.md`
+`content/aprender-con-ciencia/POST_LOG.md`
 
 Use it to determine the next unused number and avoid duplicates. Never infer publication status from numbering alone.
 
@@ -90,7 +90,7 @@ Check current publisher/account state before publishing and protect against dupl
 After the final result:
 - Update `CONTENT_IDEA_LOG.md` with the final idea/source status.
 - Update `POST_LOG.md` with the topic, source, status and relevant notes.
-- Create/update the individual post record under `series/aprender-con-ciencia/posts/` when appropriate.
+- Create/update the individual post record under `content/aprender-con-ciencia/posts/` when appropriate.
 - Record publishing status accurately.
 - Advance the next-number state only for an official numbered post.
 
