@@ -6,7 +6,7 @@ This repository contains three canonical visual-reference collections. Identity,
 
 Path: `references/identity/`
 
-Current canonical asset: `reference-sheet-01.png.png`.
+Current canonical asset: `reference-sheet-01.png`.
 
 Purpose: **primary presenter facial-identity reference**. Use this collection first whenever the recurring ERC Academy presenter appears. It governs facial structure, round black glasses, curly dark hairstyle, beard/mustache, skin appearance, expression range, and front/three-quarter/profile facial continuity.
 
@@ -76,8 +76,15 @@ It contains the canonical reference assets across **identity + presenter/full-bo
 2. When the recurring presenter is used, load the `identity` collection first as the primary facial-likeness source.
 3. Select relevant `presenter`/full-body assets as secondary support for proportions, clothing fit, posture and pose.
 4. Select multiple relevant `sample_post` assets for graphic/layout continuity.
-5. Attempt to give the selected `raw_url` values directly to the active image-capable environment if it accepts remote image references.
-6. A text-only GitHub connector failing to decode the binary is not evidence that the asset is unavailable publicly.
-7. Never claim that pixels were inspected unless the image-capable environment actually rendered them.
+5. Prefer ERC Academy Publisher `get_reference_image` to retrieve the selected canonical assets as actual image content. For presenter generation, retrieve the highest-priority identity asset before generation.
+6. Use `list_reference_images` to verify registration after adding or changing assets; listing metadata alone is not proof of pixel delivery.
+7. A text-only GitHub connector failing to decode the binary is not evidence that the asset is unavailable; use the Publisher bridge instead.
+8. Never claim that pixels were inspected unless actual image content was returned/rendered.
 
 The JSON manifest is intended to make visual-reference handoff deterministic and machine-readable across fresh chats.
+
+## Adding assets safely
+
+The reference library is extensible. New approved images may be added to the appropriate `references/` folder. Every new asset must receive a unique stable ID and a synchronized entry in `REFERENCE_ASSET_MANIFEST.json` with the correct filename, path, raw URL, role, priority, and usage metadata. Avoid duplicate extensions or stale paths.
+
+After committing a new asset, verify it appears through Publisher `list_reference_images`; when the asset will be used for pixel-level generation, also verify `get_reference_image` returns the actual image content. Normal asset additions do not require a Worker redeploy or plugin reinstall when using Publisher v1.0.21 or a later compatible version because the manifest is loaded dynamically.
