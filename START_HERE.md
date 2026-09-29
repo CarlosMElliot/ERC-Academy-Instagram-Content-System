@@ -18,7 +18,7 @@ First read `FRESH_CHAT_WORKFLOW.md` for the end-to-end operating sequence.
 10. `brand/POST_TEMPLATE.md`
 11. `publishing/ACCOUNT_AND_LINKS.md`
 12. `publishing/INSTAGRAM_WORKFLOW.md`
-13. `references/REFERENCE_ASSET_MANIFEST.md`
+13. `references/REFERENCE_ASSET_MANIFEST.md` and `references/REFERENCE_ASSET_MANIFEST.json` — use the JSON manifest first when an image-capable environment can consume remote URLs
 14. Read the latest file in `handoff/` for migration/session decisions
 15. When relevant, inspect individual records under `content/aprender-con-ciencia/posts/`
 
@@ -86,6 +86,6 @@ The GitHub connector may enumerate PNG/JPEG assets and expose repository/raw URL
 
 - Do not ask the user to re-upload existing repository references just because the GitHub connector is text-oriented.
 - Use the canonical written descriptions, manifest, handoff, and post records together with the enumerated repository asset paths.
-- Pass repository/raw URLs to an image-capable environment when that environment supports remote references.
+- Read `references/REFERENCE_ASSET_MANIFEST.json` and pass its `raw_url` values to an image-capable environment when that environment supports remote references. Prefer several sample-post references plus several presenter references rather than relying on a single image.
 - If remote binary references are unsupported, continue from the canonical visual specification unless the user explicitly needs pixel-perfect matching to a specific source image.
 - Never claim pixel-level inspection unless the active tool actually rendered the image.
