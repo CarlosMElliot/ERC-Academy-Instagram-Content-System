@@ -105,3 +105,15 @@ The GitHub connector may enumerate PNG/JPEG assets and expose repository/raw URL
 - Read `references/REFERENCE_ASSET_MANIFEST.json` and pass its `raw_url` values to an image-capable environment when that environment supports remote references. Prefer several sample-post references plus several presenter references rather than relying on a single image.
 - Prefer ERC Academy Publisher `get_reference_image` for canonical binary retrieval. For presenter artwork, do not proceed with a prose-only identity fallback when the Publisher can supply the actual identity pixels.
 - Never claim pixel-level inspection unless the active tool actually rendered the image.
+
+
+## Generator-reference handoff check
+
+Before likeness-critical presenter generation, distinguish **Publisher retrieved/rendered** from **generator-attached**. The presenter image is properly conditioned only when the active image-generation interface actually receives the canonical pixels as a reference input.
+
+The target reference package is:
+1. identity asset(s) → facial authority;
+2. selected full-body asset(s) → proportions/pose/clothing/camera-angle authority;
+3. selected sample-post asset(s) → ERC graphic/layout/style authority.
+
+Identity always wins facial conflicts. As of the 2026-09-29 verified test, Publisher v1.0.21 retrieval alone does not automatically forward MCP-returned pixels into the built-in image generator. A direct conversation attachment of the canonical identity sheet is the known-good likeness path. If that platform boundary remains, report it accurately rather than generating from a prose-only identity description.
