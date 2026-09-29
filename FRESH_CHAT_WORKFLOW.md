@@ -17,8 +17,9 @@ Read the files under `brand/`.
 
 Also inspect:
 - `references/REFERENCE_ASSET_MANIFEST.json` first for machine-readable raw image URLs and roles.
+- `references/identity/` **first whenever the recurring presenter appears**; this is the primary facial-identity source and overrides full-body assets for facial likeness.
 - `references/sample-posts/` for established ERC Academy visual design.
-- `references/full-body/` when the recurring presenter appears in the artwork.
+- `references/full-body/` as secondary support for body proportions, clothing fit, posture, pose and composition when the recurring presenter appears.
 
 The repository visual references and written specifications should be used together. If the GitHub connector cannot decode binary PNG/JPEG pixels, enumerate the assets and use their repository/raw URLs where supported by the active image tool. Do not block production or ask for redundant re-uploads solely because the GitHub connector is text-oriented; fall back to the canonical written visual specification when remote-image access is unavailable.
 
