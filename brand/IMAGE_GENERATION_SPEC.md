@@ -4,6 +4,9 @@
 - Standard Instagram feed artwork defaults to vertical 4:5.
 - Follow `BRAND_GUIDE.md`.
 - Use approved visual references when available.
+- When the recurring presenter appears, **load `references/identity/` first**. It is the primary and highest-priority source for facial likeness.
+- Use `references/full-body/` secondarily for body proportions, clothing fit, posture, pose and composition. If facial appearance conflicts, the identity collection wins.
+- Use `references/sample-posts/` for ERC Academy layout, color, lighting and graphic continuity.
 - Preserve visual continuity while creating a fresh pose/composition.
 - Every post also needs a corresponding Spanish Instagram caption.
 
