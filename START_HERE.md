@@ -8,8 +8,8 @@ First read `FRESH_CHAT_WORKFLOW.md` for the end-to-end operating sequence.
 
 1. `brand/BRAND_GUIDE.md`
 2. `brand/IMAGE_GENERATION_SPEC.md`
-3. Review the visual examples in `references/sample-posts/`
-4. Review the presenter references in `references/full-body/` when the artwork includes the recurring presenter
+3. Review/enumerate the visual examples in `references/sample-posts/`; use their repository/raw URLs directly when the active image environment supports them, otherwise use the canonical written visual specification without blocking production
+4. Review/enumerate the presenter references in `references/full-body/` when the artwork includes the recurring presenter; use repository/raw URLs directly when supported
 5. `content/aprender-con-ciencia/SERIES_SPEC.md`
 6. `content/aprender-con-ciencia/CONTENT_STRATEGY.md`
 7. `content/aprender-con-ciencia/CONTENT_IDEA_LOG.md`
@@ -78,3 +78,14 @@ When the user authorizes a post or an authorized batch, prepare/publish the corr
 ## Portability goal
 
 This repository is the canonical ERC Academy Instagram-content handoff. A new chat should be able to read these files and visual references and continue the project without making the user repeatedly teach the brand or re-upload the same reference images.
+
+
+## Repository-first binary asset handling
+
+The GitHub connector may enumerate PNG/JPEG assets and expose repository/raw URLs while still being unable to decode binary pixels itself. That limitation must not automatically stop ERC Academy production.
+
+- Do not ask the user to re-upload existing repository references just because the GitHub connector is text-oriented.
+- Use the canonical written descriptions, manifest, handoff, and post records together with the enumerated repository asset paths.
+- Pass repository/raw URLs to an image-capable environment when that environment supports remote references.
+- If remote binary references are unsupported, continue from the canonical visual specification unless the user explicitly needs pixel-perfect matching to a specific source image.
+- Never claim pixel-level inspection unless the active tool actually rendered the image.
