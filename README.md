@@ -97,7 +97,7 @@ The visual-reference folders have **two different jobs** and should be used toge
 
 ### `references/identity/` — primary facial identity reference
 
-The `identity/` folder contains the dedicated presenter identity sheet used to strengthen facial consistency across ERC Academy artwork. The current canonical sheet is `references/identity/reference-sheet-01.png.png`.
+The `identity/` folder contains the dedicated presenter identity sheet used to strengthen facial consistency across ERC Academy artwork. The current canonical sheet is `references/identity/reference-sheet-01.png`.
 
 Use this sheet primarily for face structure, glasses, hairstyle, beard/mustache, expression range and front/three-quarter/profile continuity. It complements rather than replaces the full-body set.
 
@@ -149,6 +149,28 @@ Use the reference system in this order:
 5. Only request a manual re-upload when the user specifically requires pixel-level fidelity from a particular reference **and** the active image tool cannot accept repository/raw URLs or otherwise access that image.
 
 Do not falsely claim pixel-level inspection when the tool did not render the file. However, inability of the GitHub text connector to decode PNG bytes is **not by itself a reason to stop production**.
+
+### Adding new visual-reference assets
+
+The visual library is **extensible**. New identity, full-body, sample-post, or other approved reference images may be added without changing the overall ERC workflow.
+
+When adding a new reference asset:
+
+1. Store the image in the appropriate folder under `references/` (for example `references/identity/`, `references/full-body/`, or `references/sample-posts/`).
+2. Add a corresponding entry to **`references/REFERENCE_ASSET_MANIFEST.json`**. The Publisher discovers canonical reference assets from this manifest; uploading a file alone does not register it for Publisher retrieval.
+3. Give every asset a **unique, stable `id`**. Never reuse an existing asset ID for a different image.
+4. Keep `filename`, `path`, `raw_url`, role, priority, usage, and any other manifest metadata synchronized with the actual repository file. Do not manually duplicate file extensions (for example, `.png.png`).
+5. Update **`references/REFERENCE_ASSET_MANIFEST.md`** when the new asset changes the documented reference set, hierarchy, or intended usage.
+6. After committing the image and manifest to `main`, verify the asset through ERC Academy Publisher: first confirm it appears in `list_reference_images`, then use `get_reference_image` when pixel-level verification is required.
+7. Do not treat a successful manifest listing as proof that the pixels were delivered. Pixel-level verification is complete only when `get_reference_image` successfully returns the image content.
+
+The deployed Publisher (v1.0.21 or later compatible version) requests the current manifest dynamically, so **adding normal reference assets should not require a Worker redeploy or plugin reinstall**. A redeploy is only expected when Publisher code/schema behavior itself changes. If a newly committed asset does not appear, verify the manifest entry and repository path first rather than reinstalling the plugin.
+
+For presenter likeness, additional identity images are encouraged when they provide useful real facial angles or expressions. The hierarchy remains:
+
+> **identity → full-body → sample-posts for layout/style → written historical descriptions**
+
+New identity assets supplement the existing identity set; they do not lower the priority of `references/identity/` as the authoritative source for facial likeness.
 
 ---
 
@@ -252,7 +274,7 @@ ERC-Academy-Instagram-Content-System/
 │   ├── REFERENCE_ASSET_MANIFEST.md
 │   ├── REFERENCE_ASSET_MANIFEST.json
 │   ├── identity/
-│   │   └── reference-sheet-01.png.png
+│   │   └── reference-sheet-01.png
 │   ├── full-body/
 │   │   └── 25 presenter reference PNGs
 │   └── sample-posts/
@@ -313,12 +335,12 @@ Reusable structure for an Aprender con ciencia post: number, topic, source, head
 Explains what the image collections contain, why they exist and how they should be used.
 
 ### `references/REFERENCE_ASSET_MANIFEST.json`
-Machine-readable index of all 35 canonical visual assets. It stores stable repository paths, raw GitHub URLs, GitHub page URLs, SHA values, roles and reference priorities so image-capable environments can attempt direct remote-reference loading without asking the user to re-upload assets.
+Machine-readable index of the canonical visual assets (currently 36; this count may grow as new references are added). It stores stable repository paths, raw GitHub URLs, GitHub page URLs, SHA values, roles and reference priorities so image-capable environments can attempt direct remote-reference loading without asking the user to re-upload assets.
 
 ### `references/identity/`
 Contains the dedicated presenter identity reference sheet. Use it as the primary facial-identity guide for front, smiling, three-quarter, profile, upper-body and close facial views.
 
-Current canonical asset: `references/identity/reference-sheet-01.png.png`.
+Current canonical asset: `references/identity/reference-sheet-01.png`.
 
 ### `references/full-body/`
 Contains **25 presenter reference PNGs**. Use them for continuity of the recurring presenter: appearance, proportions, clothing fit, posture, viewing angles and pose possibilities.
