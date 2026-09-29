@@ -41,3 +41,28 @@ For future chats:
 - request a manual upload only for a specific pixel-level comparison that cannot be achieved through repository/raw URL access.
 
 This policy removes binary-connector limitations as a general production blocker while keeping claims about actual pixel inspection accurate.
+
+## Machine-readable visual manifest
+
+Canonical machine-readable index: `references/REFERENCE_ASSET_MANIFEST.json`.
+
+It contains all **35 current reference assets** (25 presenter references + 10 sample posts), including:
+- stable asset ID;
+- collection/role;
+- repository path;
+- raw GitHub URL;
+- GitHub browser URL;
+- blob SHA;
+- byte size;
+- usage guidance and priority.
+
+### Remote-reference startup procedure
+
+1. Read the JSON manifest before image generation.
+2. Select multiple relevant `sample_post` assets for graphic/layout continuity.
+3. When the recurring presenter is used, select multiple `presenter` assets for identity/proportion continuity.
+4. Attempt to give the selected `raw_url` values directly to the active image-capable environment if it accepts remote image references.
+5. A text-only GitHub connector failing to decode the binary is not evidence that the asset is unavailable publicly.
+6. Never claim that pixels were inspected unless the image-capable environment actually rendered them.
+
+The JSON manifest is intended to make visual-reference handoff deterministic and machine-readable across fresh chats.
