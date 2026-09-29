@@ -37,6 +37,36 @@ After initialization, continue naturally. Examples: **“Continue with the next 
 
 ---
 
+## Supplying new research links, files, or references
+
+You do **not** need to edit the repository manually when you find a new source. Paste the link directly into the ChatGPT conversation, upload the source file, or identify the book/article/video/reference and state what you want done with it.
+
+Examples:
+
+> Use this as a reference/source for a future Aprender con ciencia post: [paste link]
+
+> Use this source for the next Aprender con ciencia post: [paste link]
+
+> Save this for later. Do not create a post yet: [paste link]
+
+### Required repository logging behavior
+
+When the user supplies a new source intended for ERC Academy content, the working chat should **persist it in this repository**, not leave it only in conversation history.
+
+1. Read/inspect the source when available.
+2. Check `content/aprender-con-ciencia/CONTENT_IDEA_LOG.md` and `POST_LOG.md` for an existing matching source or substantially repeated teaching idea.
+3. Add or update an entry in `CONTENT_IDEA_LOG.md` with the source/link or stable identifier, date, proposed topic/claim, topic family, status and notes.
+4. Use `INBOX` or `HOLD` when the source is only being saved for later. This does **not** consume an official post number.
+5. When the source becomes an official post, update the same idea entry to `USED`, connect it to the post number, update `POST_LOG.md`, and create/update `posts/[NUMBER].md`.
+6. Preserve used, rejected, merged and held entries. Do not erase them, because the history is part of the anti-repetition system.
+7. If the source cannot be opened or verified, log that limitation instead of inventing its contents.
+
+Multiple links or uploaded references may be supplied in one chat. Each meaningful source should remain traceable in the repository.
+
+This means the repository—not an individual ChatGPT conversation—is the durable memory for ERC Academy content sources, ideas and official posts.
+
+---
+
 ## Repository structure
 
 ```text
