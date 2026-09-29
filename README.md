@@ -18,6 +18,25 @@ The short production flow is:
 
 ---
 
+## How to start a fresh ChatGPT chat
+
+You should not need to re-explain ERC Academy or re-upload the reference images already stored in this repository.
+
+Start a new chat with:
+
+> Continue my ERC Academy Instagram content system from this repository:
+> https://github.com/CarlosMElliot/ERC-Academy-Instagram-Content-System
+>
+> Read the README and follow the repository's fresh-chat workflow. Use the repo as the source of truth, including its brand rules, visual references, content strategy, idea/source log, post history, and publishing workflow. Then tell me the current status and ask me whether I want a test generation or the next official Aprender con ciencia post.
+
+The expected sequence is:
+
+> **Repo → README → Fresh Chat Workflow → Start Here → brand + references → content strategy → idea/source log → post log → latest handoff → current status → Test or next official post?**
+
+After initialization, continue naturally. Examples: **“Continue with the next post”** or **“Use this research link as inspiration for a future post.”** When a source is supplied for future content, preserve it in the repository's content idea/source log according to the content strategy.
+
+---
+
 ## Repository structure
 
 ```text
