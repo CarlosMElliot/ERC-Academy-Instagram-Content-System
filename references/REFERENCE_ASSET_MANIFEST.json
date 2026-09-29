@@ -9,7 +9,13 @@
     "remote_reference_policy": "Try raw_url directly in any image-capable environment that supports remote image references.",
     "connector_fallback": "If the GitHub connector cannot decode binary pixels, do not treat that as missing repository data.",
     "truthfulness": "Do not claim pixel-level inspection unless an image-capable tool actually rendered the asset.",
-    "upload_policy": "Do not ask the user to re-upload repository assets solely because the GitHub text connector rejects binary files."
+    "upload_policy": "Do not ask the user to re-upload repository assets solely because the GitHub text connector rejects binary files.",
+    "identity_reference_policy": "references/identity/ is the primary source for presenter facial identity. It overrides full-body assets for facial likeness when references conflict.",
+    "reference_priority": [
+      "identity",
+      "presenter",
+      "sample_posts"
+    ]
   },
   "collections": {
     "presenter": {
@@ -347,7 +353,10 @@
           "github_url": "https://github.com/CarlosMElliot/ERC-Academy-Instagram-Content-System/blob/main/references/full-body/Full-Body%20Angle%201%20(25).png",
           "usage": "Identity/proportions/pose continuity; do not copy pose mechanically."
         }
-      ]
+      ],
+      "role": "secondary_presenter_body_pose",
+      "priority": "secondary_to_identity",
+      "usage": "Supporting reference for body proportions, clothing fit, posture, pose and composition. Do not override references/identity/ for facial likeness."
     },
     "sample_posts": {
       "count": 10,
@@ -493,6 +502,30 @@
           "raw_url": "https://raw.githubusercontent.com/CarlosMElliot/ERC-Academy-Instagram-Content-System/main/references/sample-posts/Instagram%20Sample%20Post%20(10).png",
           "github_url": "https://github.com/CarlosMElliot/ERC-Academy-Instagram-Content-System/blob/main/references/sample-posts/Instagram%20Sample%20Post%20(10).png",
           "usage": "Layout/color/typography/lighting/CTA/PROBALO/footer continuity."
+        }
+      ]
+    },
+    "identity": {
+      "count": 1,
+      "default_selection": [
+        "identity-reference-sheet-01"
+      ],
+      "role": "primary_presenter_identity",
+      "priority": "highest",
+      "usage": "Primary facial identity: face structure, glasses, hairstyle, beard/mustache, expression range, and front/three-quarter/profile continuity. Overrides full-body references for facial likeness.",
+      "assets": [
+        {
+          "id": "identity-reference-sheet-01",
+          "kind": "identity",
+          "role": "primary_presenter_identity",
+          "priority": "highest",
+          "filename": "reference-sheet-01.png.png",
+          "path": "references/identity/reference-sheet-01.png.png",
+          "sha": "06b89d366fa2b9bd84258e6618bf1a9d0b729fbf",
+          "size_bytes": 2168376,
+          "raw_url": "https://raw.githubusercontent.com/CarlosMElliot/ERC-Academy-Instagram-Content-System/main/references/identity/reference-sheet-01.png.png",
+          "github_url": "https://github.com/CarlosMElliot/ERC-Academy-Instagram-Content-System/blob/main/references/identity/reference-sheet-01.png.png",
+          "usage": "Load first whenever the recurring presenter appears. Primary source for facial likeness; supplement with full-body assets for proportions/pose and sample-post assets for ERC layout/style."
         }
       ]
     }
