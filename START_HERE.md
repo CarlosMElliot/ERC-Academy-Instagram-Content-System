@@ -8,28 +8,28 @@ First read `FRESH_CHAT_WORKFLOW.md` for the end-to-end operating sequence.
 
 1. `brand/BRAND_GUIDE.md`
 2. `brand/IMAGE_GENERATION_SPEC.md`
-3. Review the visual examples in `Sample ERC_Instagram_Posts/`
-4. Review the presenter references in `Full Body Shots/` when the artwork includes the recurring presenter
-5. `series/aprender-con-ciencia/SERIES_SPEC.md`
-6. `series/aprender-con-ciencia/CONTENT_STRATEGY.md`
-7. `series/aprender-con-ciencia/CONTENT_IDEA_LOG.md`
-8. `series/aprender-con-ciencia/POST_LOG.md`
-9. `series/aprender-con-ciencia/HISTORICAL_CONTEXT.md`
+3. Review the visual examples in `references/sample-posts/`
+4. Review the presenter references in `references/full-body/` when the artwork includes the recurring presenter
+5. `content/aprender-con-ciencia/SERIES_SPEC.md`
+6. `content/aprender-con-ciencia/CONTENT_STRATEGY.md`
+7. `content/aprender-con-ciencia/CONTENT_IDEA_LOG.md`
+8. `content/aprender-con-ciencia/POST_LOG.md`
+9. `content/aprender-con-ciencia/HISTORICAL_CONTEXT.md`
 10. `brand/POST_TEMPLATE.md`
 11. `publishing/ACCOUNT_AND_LINKS.md`
 12. `publishing/INSTAGRAM_WORKFLOW.md`
 13. `references/REFERENCE_ASSET_MANIFEST.md`
 14. Read the latest file in `handoff/` for migration/session decisions
-15. When relevant, inspect individual records under `series/aprender-con-ciencia/posts/`
+15. When relevant, inspect individual records under `content/aprender-con-ciencia/posts/`
 
 ## How to use the image folders
 
-### `Sample ERC_Instagram_Posts/`
+### `references/sample-posts/`
 Treat these as the strongest visual-style references. Match their established ERC Academy design language: dark navy/royal-blue environment, cyan/electric-blue accents, restrained gold details, bold white/cyan hierarchy, practical PROBALO section, strong CTA and restrained professional lighting.
 
 Do not simply copy one sample. Preserve the system while varying topic, layout, visual metaphor, pose and composition.
 
-### `Full Body Shots/`
+### `references/full-body/`
 Use these images to maintain continuity of the recurring presenter, including established appearance, body proportions, posture, clothing fit and useful viewing angles. Use them as reference material rather than a requirement to duplicate the exact pose.
 
 Rotate poses naturally: front-facing, three-quarter, profile, walking, pointing, presenting, crossed arms, hands in pockets, seated, listening, writing, demonstrating, holding a notebook/clipboard/laptop, or interacting with visual elements.
