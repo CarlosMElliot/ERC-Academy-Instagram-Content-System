@@ -25,6 +25,18 @@ First read `FRESH_CHAT_WORKFLOW.md` for the end-to-end operating sequence.
 
 ## How to use the image folders
 
+### Mandatory Publisher pixel retrieval before presenter generation
+When the recurring presenter appears, repository metadata alone is not sufficient. Use ERC Academy Publisher to retrieve the canonical image content before generation:
+
+1. Use `list_reference_images` when needed to confirm the current registered asset set.
+2. Retrieve the highest-priority identity asset(s) with `get_reference_image` and ensure actual image content is returned.
+3. Retrieve relevant full-body references when pose, proportions, clothing fit, or viewing angle materially matter.
+4. Use sample-post references for graphic/layout continuity when needed.
+5. Only then generate presenter artwork.
+
+Do not replace an available canonical identity image with a prose-only facial description. Do not ask the user to re-upload an asset that Publisher can retrieve.
+
+
 ### `references/identity/` — PRIMARY IDENTITY SOURCE
 Use this folder first whenever the recurring presenter appears. It is authoritative for facial likeness: facial structure, glasses, hairstyle, beard/mustache, expression range, and front/three-quarter/profile continuity. If a full-body reference conflicts with this identity set on facial appearance, follow `references/identity/`.
 
@@ -91,5 +103,5 @@ The GitHub connector may enumerate PNG/JPEG assets and expose repository/raw URL
 - Do not ask the user to re-upload existing repository references just because the GitHub connector is text-oriented.
 - Use the canonical written descriptions, manifest, handoff, and post records together with the enumerated repository asset paths.
 - Read `references/REFERENCE_ASSET_MANIFEST.json` and pass its `raw_url` values to an image-capable environment when that environment supports remote references. Prefer several sample-post references plus several presenter references rather than relying on a single image.
-- If remote binary references are unsupported, continue from the canonical visual specification unless the user explicitly needs pixel-perfect matching to a specific source image.
+- Prefer ERC Academy Publisher `get_reference_image` for canonical binary retrieval. For presenter artwork, do not proceed with a prose-only identity fallback when the Publisher can supply the actual identity pixels.
 - Never claim pixel-level inspection unless the active tool actually rendered the image.
