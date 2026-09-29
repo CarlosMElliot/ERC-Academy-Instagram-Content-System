@@ -9,10 +9,10 @@ Repository: `CarlosMElliot/ERC-Academy-Instagram-Content-System`
 The repository was intentionally made public by the user. The user explicitly authorized the included visual reference images to remain in the repository.
 
 At the final audit, the repository contained:
-- `Full Body Shots/` — 25 PNG presenter/body reference images.
-- `Sample ERC_Instagram_Posts/` — 10 PNG ERC Academy post/style examples.
+- `references/full-body/` — 25 PNG presenter/body reference images.
+- `references/sample-posts/` — 10 PNG ERC Academy post/style examples.
 - `brand/` — brand, generation and template documentation.
-- `series/aprender-con-ciencia/` — series specification, historical context and canonical post log.
+- `content/aprender-con-ciencia/` — series specification, historical context and canonical post log.
 - `publishing/` — account/link reference and publishing workflow.
 - `README.md` and `START_HERE.md` — repository orientation and mandatory handoff instructions.
 
@@ -21,12 +21,12 @@ At the final audit, the repository contained:
 The repository images are intended to eliminate repeated re-uploading of the same references in future chats.
 
 When creating artwork with the recurring presenter:
-- consult `Full Body Shots/` for established appearance, proportions, posture, clothing fit and useful angles;
+- consult `references/full-body/` for established appearance, proportions, posture, clothing fit and useful angles;
 - create new poses/compositions rather than copying a reference pose mechanically;
 - rotate front-facing, three-quarter, profile, walking, pointing, presenting, crossed-arms, hands-in-pockets, seated, listening, writing, demonstrating and prop-interaction compositions as appropriate.
 
 For visual design:
-- consult `Sample ERC_Instagram_Posts/` as the strongest examples of the established ERC Academy visual language;
+- consult `references/sample-posts/` as the strongest examples of the established ERC Academy visual language;
 - preserve the dark navy/royal-blue environment, cyan/electric-blue accents, restrained gold details, bold white/cyan hierarchy, practical PROBALO section, strong CTA and restrained professional lighting;
 - do not unnecessarily increase brightness, contrast, saturation, HDR or glow.
 
