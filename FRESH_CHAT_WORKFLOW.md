@@ -16,6 +16,7 @@ Follow its mandatory reading/review order and current continuation instructions.
 Read the files under `brand/`.
 
 Also inspect:
+- `references/REFERENCE_ASSET_MANIFEST.json` first for machine-readable raw image URLs and roles.
 - `references/sample-posts/` for established ERC Academy visual design.
 - `references/full-body/` when the recurring presenter appears in the artwork.
 
