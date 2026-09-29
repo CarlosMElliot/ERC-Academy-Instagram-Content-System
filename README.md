@@ -98,6 +98,46 @@ A future chat or image-generation environment must **actually inspect/access the
 
 ---
 
+## Persistent maintenance contract — mandatory for every future chat
+
+This repository is intended to be **self-maintaining documentation and durable project memory**. A chat that creates, approves, changes, publishes, rejects, researches, or otherwise materially changes ERC Academy Instagram work must not leave the new state only in conversation history.
+
+### Hardcoded end-of-work rule
+
+Before considering any ERC Academy content task complete, the working chat must ask:
+
+> **What new durable information was created in this chat, and which repository files must be updated so the next fresh chat can recover it without relying on conversation memory?**
+
+Then update the repository as appropriate.
+
+At minimum:
+
+- New source, research link, book, article, video, uploaded reference, or content idea → update `content/aprender-con-ciencia/CONTENT_IDEA_LOG.md`.
+- New official/approved numbered post → update `POST_LOG.md` and create/update `posts/[NUMBER].md`.
+- Publication attempt/result/state → update the relevant post record and publishing/history documentation when materially useful.
+- New brand, presenter, visual, caption, editorial, numbering, workflow, or publishing rule → update the canonical file that owns that rule.
+- New visual reference asset → update `references/REFERENCE_ASSET_MANIFEST.md` and the relevant reference folder.
+- Important cross-cutting behavior that a human or fresh chat needs to know → update this `README.md`, `FRESH_CHAT_WORKFLOW.md`, and/or `START_HERE.md` as appropriate.
+- Major session decisions or migrations that are not captured cleanly elsewhere → update the latest handoff or create a new dated handoff.
+
+**Do not update README for every tiny post detail.** README is the stable map and operating contract. Update it automatically when repository structure, startup instructions, durable operating rules, major capabilities, limitations, or cross-cutting behavior changes. Post-specific data belongs in the logs and post records.
+
+### Fresh-chat preservation prompt
+
+Every fresh chat should treat the following as a standing instruction after reading this repository:
+
+> **Use this repository as the durable source of truth for the ERC Academy Instagram content system. Read and follow README.md, FRESH_CHAT_WORKFLOW.md and START_HERE.md before doing production work. Do not make me re-teach information already stored here or re-upload reference assets until repository access has been attempted. Before image generation, determine whether I want a test generation or the next official sequential Aprender con ciencia post. Inspect the brand rules and accessible visual references before generating. When I provide a new link, research source, file, content idea, visual reference, approval, publication result, workflow change, or other durable project information, persist it to the correct repository log/document instead of leaving it only in chat history. Check existing logs before creating content so topics, sources and post numbers are not accidentally repeated. At the end of meaningful work, reconcile the repository so the next fresh chat can continue from it without depending on this conversation.**
+
+This instruction is part of the repository's operating contract and should remain present when the documentation is revised.
+
+### Current completeness / known historical gap
+
+The system is ready for continued production and currently preserves the brand system, presenter references, sample-post visual language, content strategy, source/idea memory, numbering state, publishing workflow and fresh-chat handoff behavior.
+
+The known historical gap is that posts **#102–138 are reserved in `POST_LOG.md` but are not all individually reconstructed as files under `posts/`**. Their numbers must not be reused. This gap does not block continuation of the sequence. Backfill those individual historical records only when reliable source material is available; do not invent missing details.
+
+---
+
 ## Repository structure
 
 ```text
