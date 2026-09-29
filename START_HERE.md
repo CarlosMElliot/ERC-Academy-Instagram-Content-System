@@ -14,6 +14,9 @@ You are working on ERC Academy social-media content. **Do not ask the user to re
 8. `brand/POST_TEMPLATE.md`
 9. `publishing/ACCOUNT_AND_LINKS.md`
 10. `publishing/INSTAGRAM_WORKFLOW.md`
+11. `references/REFERENCE_ASSET_MANIFEST.md`
+12. Read the latest file in `handoff/` for migration/session decisions
+13. When relevant, inspect individual records under `series/aprender-con-ciencia/posts/`
 
 ## How to use the image folders
 
