@@ -138,6 +138,48 @@ The known historical gap is that posts **#102–138 are reserved in `POST_LOG.md
 
 ---
 
+## Clone / new-project reset command — portable template mode
+
+This repository may be cloned or copied for a **different project, brand, content series, or Instagram account**. To make that safe and reusable, the following explicit keyword is reserved:
+
+> **REINITIALIZE_PROJECT**
+
+When the user enters **REINITIALIZE_PROJECT** in a chat working from a clone/copy of this repository, treat it as a request to enter **template reconfiguration mode**.
+
+### What the command means
+
+Do **not** assume the ERC Academy identity, `@erc.nic`, the Aprender con ciencia numbering, existing post history, presenter identity, links, or publishing account should carry into the new project.
+
+Instead:
+
+1. Confirm the repository being edited is the intended **clone/copy/new project**, not the canonical ERC Academy production repository.
+2. Ask for only the missing new-project values needed to initialize it: project/brand name, Instagram account, website/links if applicable, series name, desired starting post number, visual identity/reference assets, language/tone, and publishing configuration.
+3. Reconfigure the canonical documentation and logs for the new project.
+4. Reset numbering to the user-selected starting number. If no starting number is specified, ask rather than guessing.
+5. Clear or archive inherited post/idea history so ERC Academy history cannot be mistaken for the new project's history.
+6. Replace inherited account-specific links, handles, presenter rules and publishing metadata with the new project's values.
+7. Preserve the **generic workflow architecture**: README onboarding, fresh-chat workflow, source/idea logging, anti-repetition checks, post records, reference manifest, publishing-state tracking and repository-maintenance contract.
+8. Update README and the relevant canonical files so future chats immediately recognize the new project rather than ERC Academy.
+9. Never publish, delete remote assets, or modify an external account merely because this keyword was entered. Publishing/account actions still require the normal authorization/workflow.
+
+### Safety lock for the canonical ERC Academy repository
+
+**REINITIALIZE_PROJECT must never silently reset this canonical repository: `CarlosMElliot/ERC-Academy-Instagram-Content-System`.**
+
+If the keyword is entered while working in the canonical ERC Academy repository, first require explicit confirmation that the user intentionally wants to repurpose the canonical repository itself. Prefer using the command on a clone/new repository so ERC Academy history remains intact.
+
+### Optional one-line configuration
+
+The keyword can include configuration in the same message, for example:
+
+> **REINITIALIZE_PROJECT — Brand: Example Academy; Instagram: @example; Series: Learning Lab; Start number: 1; Language: Spanish**
+
+Use supplied values directly and ask only for information that is genuinely missing.
+
+This makes the repository architecture reusable without hard-locking future clones to ERC Academy's account, numbering, visual model or historical content.
+
+---
+
 ## Repository structure
 
 ```text
