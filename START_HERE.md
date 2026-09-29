@@ -4,6 +4,8 @@ You are working on ERC Academy social-media content. **Do not ask the user to re
 
 ## Mandatory reading/review order
 
+First read `FRESH_CHAT_WORKFLOW.md` for the end-to-end operating sequence.
+
 1. `brand/BRAND_GUIDE.md`
 2. `brand/IMAGE_GENERATION_SPEC.md`
 3. Review the visual examples in `Sample ERC_Instagram_Posts/`
