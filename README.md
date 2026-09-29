@@ -461,3 +461,12 @@ At the latest recorded handoff:
 This repository is intentionally public. The user explicitly authorized the included ERC Academy visual-reference assets to be stored here.
 
 Repository: `CarlosMElliot/ERC-Academy-Instagram-Content-System`
+
+
+## Image-generator reference handoff — verified boundary
+
+The canonical visual library remains in GitHub and ERC Academy Publisher remains the binary retrieval bridge. However, **Publisher retrieval/rendering and image-generator conditioning are separate capabilities**. A reference is not considered supplied to the generator merely because `get_reference_image` displayed it to ChatGPT.
+
+For presenter generation, the intended multi-reference package is: **identity image(s) for face → selected full-body image(s) for body/pose → selected sample-post image(s) for ERC style/layout**. The identity collection always wins facial conflicts.
+
+As verified on 2026-09-29, Publisher v1.0.21 can return/render the canonical pixels, but the current built-in image-generation path did not automatically accept those MCP-returned pixels as reference inputs. Direct attachment of the canonical identity sheet to the conversation did produce substantially stronger likeness and is the current known-good generator-reference path. Future chats must not confuse “retrieved/rendered” with “generator-attached,” and must not silently substitute a prose-only face description after a handoff failure.
