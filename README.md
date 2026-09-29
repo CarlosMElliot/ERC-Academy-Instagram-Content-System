@@ -2,7 +2,7 @@
 
 Canonical source of truth for ERC Academy social content and the **Aprender con ciencia** series.
 
-**Start with `START_HERE.md` before creating a new post.**
+**For a fresh chat, start with `FRESH_CHAT_WORKFLOW.md`, then follow `START_HERE.md`.**
 
 This repository stores the brand guide, image-generation rules, real visual references, post templates, series history, post log, and Instagram publishing workflow so a new ChatGPT conversation does not require the user to teach the ERC Academy system again.
 
