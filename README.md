@@ -67,6 +67,37 @@ This means the repository—not an individual ChatGPT conversation—is the dura
 
 ---
 
+## How to use the visual reference library
+
+The visual-reference folders have **two different jobs** and should be used together when producing new ERC Academy artwork.
+
+### `references/full-body/` — presenter identity and pose reference
+
+The 25 full-body images are the canonical visual-model reference set for the recurring ERC Academy presenter. They are not merely archived photos and they are **not pose templates that must be copied literally**.
+
+When the image-generation environment can access these references, inspect multiple relevant images to preserve recognizable continuity such as facial structure, round black glasses, curly dark hair, short beard/mustache, body proportions, clothing fit and the presenter's overall appearance.
+
+Use that identity reference to create **new, natural poses and camera angles** appropriate to each post. Valid variation includes front-facing, three-quarter views, profile views, walking, crossed arms, hands in pockets, pointing or presenting, sitting, listening, writing, demonstrating, holding a notebook/clipboard/laptop, interacting with educational graphics, and placing the presenter on either side of the composition.
+
+Do **not** force every new image to reproduce the exact pose of one reference photograph. The goal is **identity continuity with pose/composition variety**.
+
+### `references/sample-posts/` — ERC graphic and layout identity
+
+The sample-post images define the established visual language of the series: dark navy/royal-blue environment, cyan/electric-blue framing, restrained gold accents, typography hierarchy, headline treatment, PROBALO section, CTA placement, source/footer treatment, spacing, density and overall professional/scientific mood.
+
+In practical terms:
+
+> **Full-body references = what the presenter should look like.**  
+> **Sample-post references = what an ERC Academy post should look like.**
+
+Use both together with `brand/BRAND_GUIDE.md` and `brand/IMAGE_GENERATION_SPEC.md`.
+
+### Access limitation rule
+
+A future chat or image-generation environment must **actually inspect/access the repository reference images** before claiming to have used them. If the environment cannot access those image files, it must say so rather than pretending it saw them or reconstructing unseen details from guesswork. Do not ask the user to re-upload references until repository access has first been attempted.
+
+---
+
 ## Repository structure
 
 ```text
