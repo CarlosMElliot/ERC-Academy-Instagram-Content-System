@@ -116,9 +116,19 @@ In practical terms:
 
 Use both together with `brand/BRAND_GUIDE.md` and `brand/IMAGE_GENERATION_SPEC.md`.
 
-### Access limitation rule
+### Repository-first visual-reference rule
 
-A future chat or image-generation environment must **actually inspect/access the repository reference images** before claiming to have used them. If the environment cannot access those image files, it must say so rather than pretending it saw them or reconstructing unseen details from guesswork. Do not ask the user to re-upload references until repository access has first been attempted.
+The repository is the canonical home for ERC Academy visual references. A fresh chat should **not ask the user to re-upload reference images simply because the GitHub connector cannot return binary PNG bytes**.
+
+Use the reference system in this order:
+
+1. Read the written canonical descriptions in `BRAND_GUIDE.md`, `IMAGE_GENERATION_SPEC.md`, `REFERENCE_ASSET_MANIFEST.md`, the latest handoff, and any detailed post records.
+2. Enumerate the actual files in `references/sample-posts/` and `references/full-body/` and retain their repository paths/raw GitHub URLs as the canonical asset locations.
+3. If the active image-generation or multimodal environment can consume those repository/raw URLs directly, use them.
+4. If the current connector can only enumerate binary assets but cannot render their pixels, continue production from the canonical written visual specification and repository asset metadata instead of blocking the workflow or asking the user to re-upload the same files.
+5. Only request a manual re-upload when the user specifically requires pixel-level fidelity from a particular reference **and** the active image tool cannot accept repository/raw URLs or otherwise access that image.
+
+Do not falsely claim pixel-level inspection when the tool did not render the file. However, inability of the GitHub text connector to decode PNG bytes is **not by itself a reason to stop production**.
 
 ---
 
@@ -150,7 +160,7 @@ At minimum:
 
 Every fresh chat should treat the following as a standing instruction after reading this repository:
 
-> **Use this repository as the durable source of truth for the ERC Academy Instagram content system. Read and follow README.md, FRESH_CHAT_WORKFLOW.md and START_HERE.md before doing production work. Do not make me re-teach information already stored here or re-upload reference assets until repository access has been attempted. Before image generation, determine whether I want a test generation or the next official sequential Aprender con ciencia post. Inspect the brand rules and accessible visual references before generating. When I provide a new link, research source, file, content idea, visual reference, approval, publication result, workflow change, or other durable project information, persist it to the correct repository log/document instead of leaving it only in chat history. Check existing logs before creating content so topics, sources and post numbers are not accidentally repeated. At the end of meaningful work, reconcile the repository so the next fresh chat can continue from it without depending on this conversation.**
+> **Use this repository as the durable source of truth for the ERC Academy Instagram content system. Read and follow README.md, FRESH_CHAT_WORKFLOW.md and START_HERE.md before doing production work. Do not make me re-teach information already stored here or re-upload reference assets merely because a text-oriented GitHub connector cannot decode PNG bytes; use the repository-first visual-reference rule. Before image generation, determine whether I want a test generation or the next official sequential Aprender con ciencia post. Inspect the brand rules and accessible visual references before generating. When I provide a new link, research source, file, content idea, visual reference, approval, publication result, workflow change, or other durable project information, persist it to the correct repository log/document instead of leaving it only in chat history. Check existing logs before creating content so topics, sources and post numbers are not accidentally repeated. At the end of meaningful work, reconcile the repository so the next fresh chat can continue from it without depending on this conversation.**
 
 This instruction is part of the repository's operating contract and should remain present when the documentation is revised.
 
