@@ -64,3 +64,12 @@ Do not infer that a generated or approved post was published. Follow `publishing
 ## Portability objective
 
 The user's goal is that a fresh chat can open this repository, read `START_HERE.md`, inspect the supplied visual references, consult the canonical post log and immediately continue ERC Academy content production without requiring the user to reteach the brand or upload the same reference images again.
+
+
+## Publisher visual bridge update
+
+The ERC Academy Publisher visual-reference bridge was repaired and verified on version **1.0.21**. The Publisher now loads the current repository manifest dynamically and `get_reference_image` can return the actual canonical image content to ChatGPT. The former stale `.png.png` identity path issue was corrected to `references/identity/reference-sheet-01.png`.
+
+Future presenter generation should therefore retrieve the actual highest-priority identity pixels through Publisher before image generation instead of relying on metadata or a written facial description. New normal reference assets may be added by uploading the image and updating `REFERENCE_ASSET_MANIFEST.json`; they should then be verified with `list_reference_images` and, when pixel-level use is intended, `get_reference_image`. A normal reference addition should not require a Worker redeploy or plugin reinstall.
+
+The repository now carries the detailed operating instructions. A fresh chat only needs a short bootstrap request pointing it to this repository and instructing it to follow README/fresh-chat workflow; the user does not need to reproduce the full brand/image-generation prompt each time.
