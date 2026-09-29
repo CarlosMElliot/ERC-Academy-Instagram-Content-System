@@ -230,6 +230,7 @@ ERC-Academy-Instagram-Content-System/
 │
 ├── references/
 │   ├── REFERENCE_ASSET_MANIFEST.md
+│   ├── REFERENCE_ASSET_MANIFEST.json
 │   ├── full-body/
 │   │   └── 25 presenter reference PNGs
 │   └── sample-posts/
@@ -288,6 +289,9 @@ Reusable structure for an Aprender con ciencia post: number, topic, source, head
 
 ### `references/REFERENCE_ASSET_MANIFEST.md`
 Explains what the image collections contain, why they exist and how they should be used.
+
+### `references/REFERENCE_ASSET_MANIFEST.json`
+Machine-readable index of all 35 canonical visual assets. It stores stable repository paths, raw GitHub URLs, GitHub page URLs, SHA values, roles and reference priorities so image-capable environments can attempt direct remote-reference loading without asking the user to re-upload assets.
 
 ### `references/full-body/`
 Contains **25 presenter reference PNGs**. Use them for continuity of the recurring presenter: appearance, proportions, clothing fit, posture, viewing angles and pose possibilities.
