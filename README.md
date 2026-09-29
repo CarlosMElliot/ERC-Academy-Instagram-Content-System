@@ -23,7 +23,7 @@ The short production flow is:
 This repository is the **production-ready, canonical source of truth** for ERC Academy's Instagram content system. It is designed to let a fresh chat continue the project without rebuilding the brand, history, references or workflow from scratch.
 
 - **Brand system** — preserves ERC Academy's visual language, layout, Spanish caption style, tone and image-generation rules.
-- **Presenter visual model** — includes 25 full-body reference images for identity continuity while allowing new poses, camera angles and compositions.
+- **Presenter visual model** — includes 25 full-body reference images plus a dedicated identity reference sheet for stronger facial continuity while allowing new poses, camera angles and compositions.
 - **Visual examples** — includes established ERC Academy sample posts for layout and graphic-style continuity.
 - **Content strategy** — defines where new ideas come from and how research is translated into useful English-learning content.
 - **Source and idea memory** — new links, research, books, files and ideas are persisted in the repository instead of living only in chat history.
@@ -95,6 +95,12 @@ This means the repository—not an individual ChatGPT conversation—is the dura
 
 The visual-reference folders have **two different jobs** and should be used together when producing new ERC Academy artwork.
 
+### `references/identity/` — primary facial identity reference
+
+The `identity/` folder contains the dedicated presenter identity sheet used to strengthen facial consistency across ERC Academy artwork. The current canonical sheet is `references/identity/reference-sheet-01.png.png`.
+
+Use this sheet primarily for face structure, glasses, hairstyle, beard/mustache, expression range and front/three-quarter/profile continuity. It complements rather than replaces the full-body set.
+
 ### `references/full-body/` — presenter identity and pose reference
 
 The 25 full-body images are the canonical visual-model reference set for the recurring ERC Academy presenter. They are not merely archived photos and they are **not pose templates that must be copied literally**.
@@ -111,7 +117,8 @@ The sample-post images define the established visual language of the series: dar
 
 In practical terms:
 
-> **Full-body references = what the presenter should look like.**  
+> **Identity references = what the presenter’s face should look like.**  
+> **Full-body references = body proportions, clothing fit, posture and pose possibilities.**  
 > **Sample-post references = what an ERC Academy post should look like.**
 
 Use both together with `brand/BRAND_GUIDE.md` and `brand/IMAGE_GENERATION_SPEC.md`.
@@ -123,7 +130,7 @@ The repository is the canonical home for ERC Academy visual references. A fresh 
 Use the reference system in this order:
 
 1. Read the written canonical descriptions in `BRAND_GUIDE.md`, `IMAGE_GENERATION_SPEC.md`, `REFERENCE_ASSET_MANIFEST.md`, the latest handoff, and any detailed post records.
-2. Enumerate the actual files in `references/sample-posts/` and `references/full-body/` and retain their repository paths/raw GitHub URLs as the canonical asset locations.
+2. Enumerate the actual files in `references/identity/`, `references/full-body/`, and `references/sample-posts/` and retain their repository paths/raw GitHub URLs as the canonical asset locations.
 3. If the active image-generation or multimodal environment can consume those repository/raw URLs directly, use them.
 4. If the current connector can only enumerate binary assets but cannot render their pixels, continue production from the canonical written visual specification and repository asset metadata instead of blocking the workflow or asking the user to re-upload the same files.
 5. Only request a manual re-upload when the user specifically requires pixel-level fidelity from a particular reference **and** the active image tool cannot accept repository/raw URLs or otherwise access that image.
@@ -231,6 +238,8 @@ ERC-Academy-Instagram-Content-System/
 ├── references/
 │   ├── REFERENCE_ASSET_MANIFEST.md
 │   ├── REFERENCE_ASSET_MANIFEST.json
+│   ├── identity/
+│   │   └── reference-sheet-01.png.png
 │   ├── full-body/
 │   │   └── 25 presenter reference PNGs
 │   └── sample-posts/
@@ -292,6 +301,11 @@ Explains what the image collections contain, why they exist and how they should 
 
 ### `references/REFERENCE_ASSET_MANIFEST.json`
 Machine-readable index of all 35 canonical visual assets. It stores stable repository paths, raw GitHub URLs, GitHub page URLs, SHA values, roles and reference priorities so image-capable environments can attempt direct remote-reference loading without asking the user to re-upload assets.
+
+### `references/identity/`
+Contains the dedicated presenter identity reference sheet. Use it as the primary facial-identity guide for front, smiling, three-quarter, profile, upper-body and close facial views.
+
+Current canonical asset: `references/identity/reference-sheet-01.png.png`.
 
 ### `references/full-body/`
 Contains **25 presenter reference PNGs**. Use them for continuity of the recurring presenter: appearance, proportions, clothing fit, posture, viewing angles and pose possibilities.
