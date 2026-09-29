@@ -8,21 +8,25 @@ First read `FRESH_CHAT_WORKFLOW.md` for the end-to-end operating sequence.
 
 1. `brand/BRAND_GUIDE.md`
 2. `brand/IMAGE_GENERATION_SPEC.md`
-3. Review/enumerate the visual examples in `references/sample-posts/`; use their repository/raw URLs directly when the active image environment supports them, otherwise use the canonical written visual specification without blocking production
-4. Review/enumerate the presenter references in `references/full-body/` when the artwork includes the recurring presenter; use repository/raw URLs directly when supported
-5. `content/aprender-con-ciencia/SERIES_SPEC.md`
+3. Review/enumerate `references/identity/` first whenever the recurring presenter appears. This is the primary facial-identity source and overrides full-body references for facial likeness.
+4. Review/enumerate the visual examples in `references/sample-posts/`; use their repository/raw URLs directly when the active image environment supports them, otherwise use the canonical written visual specification without blocking production
+5. Review/enumerate the presenter references in `references/full-body/` when the artwork includes the recurring presenter; use repository/raw URLs directly when supported
+10. `content/aprender-con-ciencia/SERIES_SPEC.md`
 6. `content/aprender-con-ciencia/CONTENT_STRATEGY.md`
 7. `content/aprender-con-ciencia/CONTENT_IDEA_LOG.md`
 8. `content/aprender-con-ciencia/POST_LOG.md`
 9. `content/aprender-con-ciencia/HISTORICAL_CONTEXT.md`
-10. `brand/POST_TEMPLATE.md`
-11. `publishing/ACCOUNT_AND_LINKS.md`
+11. `brand/POST_TEMPLATE.md`
+13. `publishing/ACCOUNT_AND_LINKS.md`
 12. `publishing/INSTAGRAM_WORKFLOW.md`
-13. `references/REFERENCE_ASSET_MANIFEST.md` and `references/REFERENCE_ASSET_MANIFEST.json` — use the JSON manifest first when an image-capable environment can consume remote URLs
-14. Read the latest file in `handoff/` for migration/session decisions
-15. When relevant, inspect individual records under `content/aprender-con-ciencia/posts/`
+14. `references/REFERENCE_ASSET_MANIFEST.md` and `references/REFERENCE_ASSET_MANIFEST.json` — use the JSON manifest first when an image-capable environment can consume remote URLs
+15. Read the latest file in `handoff/` for migration/session decisions
+16. When relevant, inspect individual records under `content/aprender-con-ciencia/posts/`
 
 ## How to use the image folders
+
+### `references/identity/` — PRIMARY IDENTITY SOURCE
+Use this folder first whenever the recurring presenter appears. It is authoritative for facial likeness: facial structure, glasses, hairstyle, beard/mustache, expression range, and front/three-quarter/profile continuity. If a full-body reference conflicts with this identity set on facial appearance, follow `references/identity/`.
 
 ### `references/sample-posts/`
 Treat these as the strongest visual-style references. Match their established ERC Academy design language: dark navy/royal-blue environment, cyan/electric-blue accents, restrained gold details, bold white/cyan hierarchy, practical PROBALO section, strong CTA and restrained professional lighting.
@@ -30,7 +34,7 @@ Treat these as the strongest visual-style references. Match their established ER
 Do not simply copy one sample. Preserve the system while varying topic, layout, visual metaphor, pose and composition.
 
 ### `references/full-body/`
-Use these images to maintain continuity of the recurring presenter, including established appearance, body proportions, posture, clothing fit and useful viewing angles. Use them as reference material rather than a requirement to duplicate the exact pose.
+Use these images as secondary support to maintain continuity of the recurring presenter, including established appearance, body proportions, posture, clothing fit and useful viewing angles. Use them as reference material rather than a requirement to duplicate the exact pose.
 
 Rotate poses naturally: front-facing, three-quarter, profile, walking, pointing, presenting, crossed arms, hands in pockets, seated, listening, writing, demonstrating, holding a notebook/clipboard/laptop, or interacting with visual elements.
 
