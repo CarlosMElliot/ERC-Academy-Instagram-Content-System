@@ -47,6 +47,11 @@ Read the newest relevant file under:
 
 This captures decisions or context that may be newer than older historical documentation.
 
+### 6A. Retrieve presenter pixels when applicable
+If the requested artwork includes the recurring ERC Academy presenter, use ERC Academy Publisher before generation. Confirm the canonical identity assets and retrieve the actual highest-priority identity image content with `get_reference_image`. Retrieve relevant full-body assets when needed for proportions, pose, clothing fit, or camera angle. Sample-post assets govern visual/layout continuity.
+
+**Do not generate presenter artwork from metadata or a prose-only facial description when the canonical identity pixels are retrievable.** Do not ask the user to re-upload repository assets that Publisher can retrieve.
+
 ### 7. Confirm the production path
 Before image generation, ask the user to choose:
 
