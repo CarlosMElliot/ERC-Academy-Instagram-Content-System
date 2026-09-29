@@ -18,6 +18,30 @@ The short production flow is:
 
 ---
 
+## Project at a glance
+
+This repository is the **production-ready, canonical source of truth** for ERC Academy's Instagram content system. It is designed to let a fresh chat continue the project without rebuilding the brand, history, references or workflow from scratch.
+
+- **Brand system** — preserves ERC Academy's visual language, layout, Spanish caption style, tone and image-generation rules.
+- **Presenter visual model** — includes 25 full-body reference images for identity continuity while allowing new poses, camera angles and compositions.
+- **Visual examples** — includes established ERC Academy sample posts for layout and graphic-style continuity.
+- **Content strategy** — defines where new ideas come from and how research is translated into useful English-learning content.
+- **Source and idea memory** — new links, research, books, files and ideas are persisted in the repository instead of living only in chat history.
+- **Anti-repetition system** — checks prior topics, claims, exercises, sources, headlines and visual concepts before developing new content.
+- **Protected numbering** — official post history is tracked so numbers are not accidentally reused; the current intended continuation point is **#140** unless `POST_LOG.md` has since changed.
+- **Test vs. official workflow** — before image generation, determine whether the user wants a test generation or the next official sequential post. Tests do not consume official numbers unless explicitly promoted.
+- **Artwork + caption package** — official content is developed as both the visual post and its corresponding Spanish Instagram caption.
+- **Publishing workflow** — tracks preparation/publication state and includes duplicate-publishing safeguards.
+- **Fresh-chat onboarding** — README, `FRESH_CHAT_WORKFLOW.md` and `START_HERE.md` tell a new chat exactly how to initialize itself.
+- **Persistent repository maintenance** — meaningful new project information must be written back to the appropriate GitHub log/document before work is considered complete.
+- **README maintenance** — this overview and operating documentation should be updated when major structure, capability, limitation or cross-cutting workflow rules change.
+- **Portable template mode** — a clone can be reconfigured for another project, brand, Instagram account or numbering sequence with **`REINITIALIZE_PROJECT`**, while the canonical ERC Academy repository is protected from silent reset.
+- **Known historical limitation** — posts **#102–138** are protected/reserved in the post log but are not all individually reconstructed under `posts/`. They must not be reused, and missing historical details must not be invented.
+
+**In short:** the repository stores the **brand + presenter + references + research memory + content history + numbering + publishing workflow + future-chat instructions** needed to keep ERC Academy's Instagram system continuous across conversations.
+
+---
+
 ## How to start a fresh ChatGPT chat
 
 You should not need to re-explain ERC Academy or re-upload the reference images already stored in this repository.
