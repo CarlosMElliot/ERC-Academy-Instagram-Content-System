@@ -4,7 +4,7 @@ This repository contains two canonical visual-reference collections.
 
 ## Full Body Shots
 
-Path: `Full Body Shots/`
+Path: `references/full-body/`
 
 Count at the 2026-09-29 audit: **25 PNG files**.
 
@@ -14,7 +14,7 @@ These files are references, not pose templates. Preserve continuity while creati
 
 ## Sample ERC Instagram Posts
 
-Path: `Sample ERC_Instagram_Posts/`
+Path: `references/sample-posts/`
 
 Count at the 2026-09-29 audit: **10 PNG files**.
 
