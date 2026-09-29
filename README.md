@@ -48,10 +48,17 @@ You should not need to re-explain ERC Academy or re-upload the reference images 
 
 Start a new chat with:
 
-> Continue my ERC Academy Instagram content system from this repository:
-> https://github.com/CarlosMElliot/ERC-Academy-Instagram-Content-System
+> Continue my ERC Academy Instagram content system from the GitHub repository `CarlosMElliot/ERC-Academy-Instagram-Content-System`.
 >
-> Read the README and follow the repository's fresh-chat workflow. Use the repo as the source of truth, including its brand rules, visual references, content strategy, idea/source log, post history, and publishing workflow. Then tell me the current status and ask me whether I want a test generation or the next official Aprender con ciencia post.
+> Treat the repository as the canonical source of truth. Read `README.md` and follow its fresh-chat workflow and referenced documentation before creating content.
+>
+> Use ERC Academy Publisher for the repository's canonical visual references. When artwork includes the recurring presenter, retrieve the **actual identity-reference image pixels** with `get_reference_image` before image generation. Follow the hierarchy: **identity references for facial likeness → full-body references for proportions/pose → sample posts for ERC visual style/layout**. Do not substitute a written facial description when canonical identity images are available.
+>
+> Follow the repository's brand rules, content strategy, anti-repetition system, numbering history, caption requirements, publishing safeguards, and maintenance contract. Do not ask me to re-upload assets already available through the repository/Publisher.
+>
+> Determine from my request whether this is a **test** or an **official Aprender con ciencia post**. Tests do not consume an official number. For official posts, verify the next available number from the repository rather than assuming it.
+>
+> After meaningful work, update the appropriate repository documentation/logs so another fresh chat can continue without relying on this conversation. Proceed directly once initialized and ask a question only when a genuinely necessary decision is missing.
 
 The expected sequence is:
 
@@ -145,10 +152,10 @@ Use the reference system in this order:
 1. Read the written canonical descriptions in `BRAND_GUIDE.md`, `IMAGE_GENERATION_SPEC.md`, `REFERENCE_ASSET_MANIFEST.md`, the latest handoff, and any detailed post records.
 2. Enumerate the actual files in `references/identity/`, `references/full-body/`, and `references/sample-posts/` and retain their repository paths/raw GitHub URLs as the canonical asset locations.
 3. If the active image-generation or multimodal environment can consume those repository/raw URLs directly, use them.
-4. If the current connector can only enumerate binary assets but cannot render their pixels, continue production from the canonical written visual specification and repository asset metadata instead of blocking the workflow or asking the user to re-upload the same files.
-5. Only request a manual re-upload when the user specifically requires pixel-level fidelity from a particular reference **and** the active image tool cannot accept repository/raw URLs or otherwise access that image.
+4. Use ERC Academy Publisher's `list_reference_images` to discover registered canonical assets and `get_reference_image` to retrieve actual image pixels. For presenter artwork, pixel retrieval of the identity reference is mandatory before generation when Publisher is available.
+5. Only request a manual re-upload when the canonical asset cannot be retrieved through ERC Academy Publisher or another available image-capable path.
 
-Do not falsely claim pixel-level inspection when the tool did not render the file. However, inability of the GitHub text connector to decode PNG bytes is **not by itself a reason to stop production**.
+Do not falsely claim pixel-level inspection when the image was not actually returned. A text-oriented GitHub connector's binary limitation is not a blocker because ERC Academy Publisher is the canonical pixel-delivery bridge.
 
 ### Adding new visual-reference assets
 
@@ -192,7 +199,7 @@ At minimum:
 - New official/approved numbered post → update `POST_LOG.md` and create/update `posts/[NUMBER].md`.
 - Publication attempt/result/state → update the relevant post record and publishing/history documentation when materially useful.
 - New brand, presenter, visual, caption, editorial, numbering, workflow, or publishing rule → update the canonical file that owns that rule.
-- New visual reference asset → update `references/REFERENCE_ASSET_MANIFEST.md` and the relevant reference folder.
+- New visual reference asset → store it in the relevant reference folder, update `references/REFERENCE_ASSET_MANIFEST.json`, update `references/REFERENCE_ASSET_MANIFEST.md` when documentation changes, and verify registration/pixel retrieval through Publisher.
 - Important cross-cutting behavior that a human or fresh chat needs to know → update this `README.md`, `FRESH_CHAT_WORKFLOW.md`, and/or `START_HERE.md` as appropriate.
 - Major session decisions or migrations that are not captured cleanly elsewhere → update the latest handoff or create a new dated handoff.
 
