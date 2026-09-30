@@ -470,3 +470,14 @@ The canonical visual library remains in GitHub and ERC Academy Publisher remains
 For presenter generation, the intended multi-reference package is: **identity image(s) for face → selected full-body image(s) for body/pose → selected sample-post image(s) for ERC style/layout**. The identity collection always wins facial conflicts.
 
 As verified on 2026-09-29, Publisher v1.0.21 can return/render the canonical pixels, but the current built-in image-generation path did not automatically accept those MCP-returned pixels as reference inputs. Direct attachment of the canonical identity sheet to the conversation did produce substantially stronger likeness and is the current known-good generator-reference path. Future chats must not confuse “retrieved/rendered” with “generator-attached,” and must not silently substitute a prose-only face description after a handoff failure.
+
+
+## No-API generation architecture — current status
+
+ERC Academy uses **no OpenAI API dependency** for artwork generation. GitHub remains the canonical reference library, ERC Academy Publisher remains the canonical binary-reference/publishing bridge, and artwork generation stays inside ChatGPT's native image-generation experience.
+
+Publisher v1.0.21 correctly returns canonical image pixels as MCP image content. Tests on 2026-09-30 confirmed that the remaining limitation is the ChatGPT host handoff from connector-returned MCP image content into the native image generator; rewriting Publisher's GitHub fetch/Base64/MIME logic is not currently justified.
+
+A direct ChatGPT attachment of the canonical identity sheet is the verified likeness path. A further no-API avenue remains available for engineering investigation: ChatGPT plugin UI/file references and widget-state `imageIds`. This path is **not yet verified end to end** for ERC and must not be described as production-ready until tested.
+
+Do not add an OpenAI API key or server-side OpenAI image-generation call to Publisher unless the user explicitly changes this architecture decision.
