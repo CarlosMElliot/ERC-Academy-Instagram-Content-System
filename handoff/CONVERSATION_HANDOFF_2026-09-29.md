@@ -73,3 +73,16 @@ The ERC Academy Publisher visual-reference bridge was repaired and verified on v
 Future presenter generation should therefore retrieve the actual highest-priority identity pixels through Publisher before image generation instead of relying on metadata or a written facial description. New normal reference assets may be added by uploading the image and updating `REFERENCE_ASSET_MANIFEST.json`; they should then be verified with `list_reference_images` and, when pixel-level use is intended, `get_reference_image`. A normal reference addition should not require a Worker redeploy or plugin reinstall.
 
 The repository now carries the detailed operating instructions. A fresh chat only needs a short bootstrap request pointing it to this repository and instructing it to follow README/fresh-chat workflow; the user does not need to reproduce the full brand/image-generation prompt each time.
+
+
+## 2026-09-30 no-API bridge investigation
+
+The user explicitly rejected an OpenAI API dependency. Do not add `OPENAI_API_KEY`, server-side OpenAI image generation, or a `generate_erc_artwork` API-backed tool as the default architecture.
+
+Tests confirmed Publisher v1.0.21 returns the expected MCP image payload for canonical references. Attempts to forward connector-returned MCP image content/data URI into ChatGPT's native image-reference path failed at the host/RPC handoff. This does not indicate a failure in GitHub retrieval or Publisher Base64/MIME handling.
+
+Do not modify the working Publisher solely to re-encode the same MCP image payload. The verified likeness path remains direct ChatGPT attachment of the canonical identity sheet.
+
+OpenAI's current plugin documentation also describes widget-state `imageIds` for making supported file IDs visible to the model on later turns. Eligible IDs originate from supported ChatGPT file flows (upload/select, tool-input file params, or tool-result file references). This provides a possible **no-API** next experiment: a Publisher UI/file-reference bridge. It is not yet verified for ERC native image generation and must remain labeled experimental until an end-to-end generation succeeds.
+
+Official post #140 was not consumed and nothing was published during these tests.
