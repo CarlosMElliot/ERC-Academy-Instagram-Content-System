@@ -47,3 +47,22 @@ The identity reference always wins facial conflicts. Full-body assets must not o
 The current ChatGPT session verified that Publisher v1.0.21 can return the canonical identity pixels and ChatGPT can render them. However, those MCP-returned pixels were not automatically forwarded into the built-in image generator as a reference input. A direct conversation image attachment of the same identity sheet did successfully produce substantially stronger likeness.
 
 Until a supported Publisher/MCP → image-generator reference handoff is verified, keep GitHub/Publisher as the canonical asset library but treat direct generator attachment as the known-good path for likeness-critical generation. Do not repeatedly generate from text after a reference-handoff failure.
+
+
+## No-API ChatGPT reference bridge status (2026-09-30)
+
+The project must not require the OpenAI API for ERC artwork generation. Keep generation inside ChatGPT's native image-generation experience and keep ERC Academy Publisher focused on canonical reference retrieval and Instagram publishing.
+
+Verified behavior:
+- Publisher v1.0.21 successfully retrieves canonical GitHub image bytes and returns MCP image content.
+- ChatGPT can inspect the returned reference image, but direct attempts in the current chat to forward that MCP ImageContent/data URI into the native image generator failed at the host/RPC handoff boundary.
+- A normal conversation image attachment of the canonical identity sheet remains verified to produce strong presenter likeness.
+
+Do **not** modify the working Publisher encoding/retrieval logic merely to work around this host boundary, and do not add an OpenAI API dependency.
+
+### Supported avenue still to test
+Current ChatGPT plugin documentation describes a supported UI/file route in which widget state can expose `imageIds` to the model on later turns. Those IDs must come from ChatGPT-supported file sources such as `window.openai.uploadFile`, `window.openai.selectFiles`, tool-input file parameters, or tool-result file references. This is distinct from returning raw MCP ImageContent.
+
+Therefore the next engineering experiment, if pursued, is a **Publisher UI/file-reference bridge**, not another Base64/MIME rewrite: determine whether canonical GitHub references can be surfaced through a supported ChatGPT file reference and then placed in widget-state `imageIds`. Treat this as experimental until an end-to-end test proves the native generator actually receives the images.
+
+Until that is verified, do not claim fully automatic GitHub → Publisher → native-image-generator conditioning.
