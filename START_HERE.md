@@ -117,3 +117,14 @@ The target reference package is:
 3. selected sample-post asset(s) → ERC graphic/layout/style authority.
 
 Identity always wins facial conflicts. As of the 2026-09-29 verified test, Publisher v1.0.21 retrieval alone does not automatically forward MCP-returned pixels into the built-in image generator. A direct conversation attachment of the canonical identity sheet is the known-good likeness path. If that platform boundary remains, report it accurately rather than generating from a prose-only identity description.
+
+
+## No-API constraint and next bridge experiment
+
+The user has explicitly chosen **no OpenAI API** for this system. Do not propose adding an OpenAI API key as the default solution for reference-conditioned artwork.
+
+Keep Publisher v1.0.21's working reference retrieval/publishing behavior intact. The verified failure is downstream: raw MCP ImageContent returned by `get_reference_image` was inspectable by ChatGPT but could not be forwarded through the tested host path as a native image-generation reference.
+
+Known-good fallback: a normal ChatGPT image attachment of the canonical identity sheet provides strong likeness.
+
+Potential no-API engineering path: test a ChatGPT plugin UI/file-reference flow that produces supported file IDs and exposes them through widget-state `imageIds`. This remains experimental. Do not state that it works until an actual generation proves that the native generator received the canonical references.
